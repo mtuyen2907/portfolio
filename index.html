@@ -2,62 +2,159 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
-  <title>Portfolio | Trương Thị Mỹ Tuyền</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV | TRƯƠNG THỊ MỸ TUYỀN </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f9fafb;
-      color: #111;
-      line-height: 1.6;
+    :root {
+      --main: #86c76d;
+      --text: #545454;
+      --bg: #f8faf8;
+      --card: #ffffff;
     }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
     .container {
       max-width: 1000px;
       margin: auto;
-      padding: 40px 20px;
+      padding: 60px 20px;
     }
-    h1, h2 {
-      margin-bottom: 10px;
-    }
-    .hero {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 30px;
-    }
-    .avatar {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #3b82f6, #9333ea);
-    }
-    .section {
-      margin-top: 60px;
-    }
-    .skills, .projects {
+
+    /* HEADER */
+    .header {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: 1fr 220px;
+      gap: 40px;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 42px;
+      color: var(--main);
+      margin: 0;
+    }
+
+    .job {
+      font-size: 18px;
+      margin-top: 10px;
+      color: var(--text);
+    }
+
+    .avatar {
+      width: 200px;
+      height: 200px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #86c76d, #b7e3a6);
+    }
+
+    /* SECTION */
+    .section {
+      margin-top: 70px;
+    }
+
+    .section h2 {
+      font-size: 26px;
+      color: var(--main);
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .section h2::after {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background: var(--main);
+      display: block;
+      margin-top: 8px;
+      border-radius: 10px;
+    }
+
+    /* ABOUT */
+    .about {
+      max-width: 800px;
+    }
+
+    /* SKILLS */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
     }
-    .card {
-      background: white;
+
+    .skill {
+      background: var(--card);
       padding: 20px;
       border-radius: 16px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      font-weight: 500;
     }
+
+    /* PROJECTS */
+    .projects {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .project {
+      background: var(--card);
+      padding: 26px;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+    }
+
+    .project h3 {
+      margin-top: 0;
+      color: var(--main);
+    }
+
+    /* CONTACT */
     .contact {
       text-align: center;
-      margin-top: 80px;
+      margin-top: 90px;
     }
+
     .btn {
       display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background: #3b82f6;
-      color: white;
+      margin-top: 24px;
+      padding: 14px 36px;
       border-radius: 999px;
+      background: var(--main);
+      color: white;
       text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(134,199,109,0.4);
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .avatar {
+        margin: auto;
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -65,56 +162,69 @@
 <body>
   <div class="container">
 
-    <!-- HERO -->
-    <section class="hero">
+    <!-- HEADER -->
+    <section class="header">
       <div>
-        <h1>Xin chào, tôi là Mỹ Tuyền</h1>
-        <p>Digital Marketing / Content Leader – tập trung vào tăng trưởng & doanh thu.</p>
-        <a class="btn" href="#contact">Liên hệ</a>
+        <h1>Mỹ Tuyền</h1>
+        <p class="job">
+          Digital Marketing • Content Leader • Performance-oriented
+        </p>
       </div>
       <div class="avatar"></div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- ABOUT ME -->
     <section class="section">
       <h2>Về tôi</h2>
-      <p>
-        Tôi có hơn 3 năm kinh nghiệm Digital Marketing, từng quản lý team social,
-        chạy Facebook Ads ngân sách lớn và xây dựng hệ thống nội dung đa kênh.
-        Điểm mạnh của tôi là tư duy chiến lược, tối ưu hiệu suất và triển khai thực tế.
+      <p class="about">
+       Tôi theo đuổi định hướng Performance Marketing, tập trung vào tối ưu chuyển đổi, phân tích dữ liệu và xây dựng hệ thống tăng trưởng bền vững. Tôi tin rằng mọi chiến dịch hiệu quả đều phải bắt đầu từ dữ liệu chính xác, ý tưởng sắc bén và quy trình tối ưu liên tục.
       </p>
+      <p class="about">
+      Điểm mạnh cá nhân:
+      Tư duy data-driven trong triển khai quảng cáo
+      Khả năng quản lý team & workflow vận hành
+      Phát triển nội dung & chiến lược tăng trưởng kênh
+      Giải quyết vấn đề nhanh – linh hoạt – có trách nhiệm
+         </p>
     </section>
 
     <!-- SKILLS -->
     <section class="section">
-      <h2>Kỹ năng</h2>
+      <h2>Kỹ năng chính</h2>
       <div class="skills">
-        <div class="card">Facebook Ads</div>
-        <div class="card">Content Strategy</div>
-        <div class="card">Video & Social Media</div>
-        <div class="card">Team Management</div>
-        <div class="card">Analytics & KPI</div>
-        <div class="card">Branding</div>
+        <div class="skill">Facebook Ads & Performance</div>
+        <div class="skill">Content Strategy & Storytelling</div>
+        <div class="skill">Video & Social Media</div>
+        <div class="skill">Quản lý đội nhóm</div>
+        <div class="skill">Phân tích dữ liệu & KPI</div>
+        <div class="skill">Xây dựng thương hiệu</div>
       </div>
     </section>
 
     <!-- PROJECTS -->
     <section class="section">
-      <h2>Dự án nổi bật</h2>
+      <h2>Dự án tiêu biểu</h2>
       <div class="projects">
-        <div class="card">
-          <h3>Dự án 1</h3>
-          <p>Xây dựng hệ thống fanpage & nội dung, tăng trưởng traffic và doanh thu.</p>
+        <div class="project">
+          <h3>Hệ thống Fanpage & Social</h3>
+          <p>
+            Xây dựng và quản lý hơn 100 fanpage & kênh social,
+            tăng trưởng organic, hỗ trợ bán hàng và xây thương hiệu.
+          </p>
         </div>
-        <div class="card">
-          <h3>Dự án 2</h3>
-          <p>Chạy Facebook Ads tối ưu chi phí, tăng lead & đơn hàng.</p>
+
+        <div class="project">
+          <h3>Facebook Ads – Lead & Doanh thu</h3>
+          <p>
+            Triển khai và tối ưu quảng cáo với ngân sách lớn,
+            kiểm soát chi phí, cải thiện tỷ lệ chuyển đổi và lợi nhuận.
+          </p>
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section class="contact" id="contact">
+    <section class="contact">
       <h2>Liên hệ</h2>
       <p>Email: mtuyen2907@gmail.com</p>
       <a class="btn" href="mailto:mtuyen2907@gmail.com">Gửi Email</a>
