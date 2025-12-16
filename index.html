@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portfolio | Trương Thị Mỹ Tuyền</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9fafb;
+      color: #111;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    h1, h2 {
+      margin-bottom: 10px;
+    }
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 30px;
+    }
+    .avatar {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #3b82f6, #9333ea);
+    }
+    .section {
+      margin-top: 60px;
+    }
+    .skills, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+    .contact {
+      text-align: center;
+      margin-top: 80px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: #3b82f6;
+      color: white;
+      border-radius: 999px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <h1>Xin chào, tôi là Mỹ Tuyền</h1>
+        <p>Digital Marketing / Content Leader – tập trung vào tăng trưởng & doanh thu.</p>
+        <a class="btn" href="#contact">Liên hệ</a>
+      </div>
+      <div class="avatar"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section">
+      <h2>Về tôi</h2>
+      <p>
+        Tôi có hơn 3 năm kinh nghiệm Digital Marketing, từng quản lý team social,
+        chạy Facebook Ads ngân sách lớn và xây dựng hệ thống nội dung đa kênh.
+        Điểm mạnh của tôi là tư duy chiến lược, tối ưu hiệu suất và triển khai thực tế.
+      </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section">
+      <h2>Kỹ năng</h2>
+      <div class="skills">
+        <div class="card">Facebook Ads</div>
+        <div class="card">Content Strategy</div>
+        <div class="card">Video & Social Media</div>
+        <div class="card">Team Management</div>
+        <div class="card">Analytics & KPI</div>
+        <div class="card">Branding</div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section">
+      <h2>Dự án nổi bật</h2>
+      <div class="projects">
+        <div class="card">
+          <h3>Dự án 1</h3>
+          <p>Xây dựng hệ thống fanpage & nội dung, tăng trưởng traffic và doanh thu.</p>
+        </div>
+        <div class="card">
+          <h3>Dự án 2</h3>
+          <p>Chạy Facebook Ads tối ưu chi phí, tăng lead & đơn hàng.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <h2>Liên hệ</h2>
+      <p>Email: mtuyen2907@gmail.com</p>
+      <a class="btn" href="mailto:mtuyen2907@gmail.com">Gửi Email</a>
+    </section>
+
+  </div>
+</body>
+</html>
